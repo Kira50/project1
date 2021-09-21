@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600;1,700&display=swap');
+
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: Lora, serif;
+	line-height: 2;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+.description {
+	background-color: black;
+	width:50%;
+}
+
+/* TOP */
+.top {
+	display: flex;
+	justify-content: space-around;
+}
+#logo {
+	height:100px;
+	margin: 15px;
+}
+#logo:hover {
+	cursor: pointer;
+}
+#burger {
+	display: none;
+	margin-top: 50px;
+}
+nav {
+	color: #fff;
+}
+ul {
+	display: flex;
+}
+li {
+	list-style-type: none;
+	margin-right: 10px;
+	box-sizing: border-box;
+	border: 1px double #fff;
+	border-top: none;
+	border-left: none;
+	border-radius: 10px;
+	padding: 0 5px;
+	
+}
+li:hover {
+	cursor: pointer;
+	color: #000;
+	background-color: #fff;
+	
+}
+
+
+
+#mainPhoto {
+	width:50%;
+}
+h1 {
+	color: #fff;
+	padding: 30px;
+	text-align: center;
+}
+h3 {
+	color: #fff;
+	padding: 30px;
+	
+}
+.container {
+
+}
+
+
+/* Адаптивность */
+
+@media (max-width: 500px) {
+	#burger {
+		display: block;
+		color: #fff;
+		pozition: absolute;
+	}
+	#burger:hover {
+		cursor: pointer;
+	}
+	nav {
+		display: none;
+	}
+	ul {
+		display: table;
+	}
+	.container {
+		
+	}
+}
+@media (max-width: 980px) {
+	.header {
+		display: table;
+	}
+	.description {
+		width: 100%;
+	}
+	#mainPhoto {
+		width: 100%;
+	}
+	h3 {
+		margin-bottom: 0;
+		text-align: center;
+	}
+	.container {
+
+	}
+}
+@keyframe show 
