@@ -40,6 +40,11 @@ body {
 nav {
 	color: #fff;
 }
+nav > ul > li > a { 
+	cursor: default; 
+	color: #fff; 
+	text-decoration:none; 
+}
 #nav {
 	display: flex;
 }
@@ -54,10 +59,10 @@ nav {
 	padding: 0 5px;
 	
 }
-.nav:hover {
+nav > ul > li > a:hover {
 	cursor: pointer;
 	color: #f10808;
-	background-color: #fff;
+	
 }
 
 
@@ -124,7 +129,7 @@ article > ul > li::before {
 	display: flex;
 	justify-content: space-around;
 }
-
+/*  ClinicCases  */
 .richard_history,  .egor_history, .ariya_history, .dusya_history, .marsik_history, .danya_history{
 	display: none;
 	box-sizing: border-box;
@@ -140,12 +145,19 @@ article > ul > li::before {
 	float: right;
 	border-radius:10px;
 }
-#richard:hover, #egor:hover, #ariya:hover, #dusya:hover, #marsik:hover, #danya:hover  {
-	color: #f10808;
-	cursor: pointer;
+.clinic > input {
+	display: none;
 }
-#richard, #egor, #ariya, #dusya, #marsik, #danya  {
-	color: #fff;
+#case:checked + label + .egor_history {
+	display: block;
+	animation: show 1s ease;
+}
+[for=case] {
+	color: #FFF;
+}
+[for=case]:hover {
+	cursor: pointer;
+	color: #f10808;
 }
 /* FOOTER */
 .contacts {
@@ -170,16 +182,7 @@ h1::selection, h3::selection, a::selection, p::selection, li::selection, nav::se
 /* Адаптивность */
 
 @media (max-width: 500px) {
-	[for=burger] {
 
-	}
-	[for=burger]:hover {
-		cursor: pointer;
-	}
-	nav {
-		display: none;
-	}
-}
 @media (max-width: 980px) {
 	[for=burger] {
 		display: block;
