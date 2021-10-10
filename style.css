@@ -62,7 +62,6 @@ nav > ul > li > a {
 nav > ul > li > a:hover {
 	cursor: pointer;
 	color: #f10808;
-	
 }
 
 
@@ -78,9 +77,6 @@ nav > ul > li > a:hover {
 .description > h3 {
 	color: #fff;
 	padding: 30px;
-	
-}
-.container {
 
 }
 
@@ -130,6 +126,11 @@ article > ul > li::before {
 	justify-content: space-around;
 }
 /*  ClinicCases  */
+
+h3 {
+	text-align: center;
+	color: #fff;
+}
 .richard_history,  .egor_history, .ariya_history, .dusya_history, .marsik_history, .danya_history{
 	display: none;
 	box-sizing: border-box;
@@ -140,22 +141,26 @@ article > ul > li::before {
 	padding: 20px 20px;
     background: #fff;
 }
+.clinic_cases {
+	flex-direction: column;
+	text-align: center;
+}
 .clinic_foto{
 	height: 300px;
 	float: right;
 	border-radius:10px;
 }
-.clinic > input {
+.clinic > .clinic_cases > input {
 	display: none;
 }
-#case:checked + label + .egor_history {
+#case1:checked + label + .egor_history, #case2:checked + label + .danya_history{
 	display: block;
 	animation: show 1s ease;
 }
-[for=case] {
+[for=case1], [for=case2] {
 	color: #FFF;
 }
-[for=case]:hover {
+[for=case1]:hover, [for=case2]:hover {
 	cursor: pointer;
 	color: #f10808;
 }
@@ -182,7 +187,7 @@ h1::selection, h3::selection, a::selection, p::selection, li::selection, nav::se
 /* Адаптивность */
 
 @media (max-width: 500px) {
-
+}
 @media (max-width: 980px) {
 	[for=burger] {
 		display: block;
