@@ -127,7 +127,7 @@ article > ul > li::before {
 }
 /*  ClinicCases  */
 
-h3 {
+.clinic > h1 {
 	text-align: center;
 	color: #fff;
 }
@@ -142,7 +142,7 @@ h3 {
     background: #fff;
 }
 .clinic_cases {
-	flex-direction: column;
+	display: grid;
 	text-align: center;
 }
 .clinic_foto{
@@ -153,17 +153,37 @@ h3 {
 .clinic > .clinic_cases > input {
 	display: none;
 }
-#case1:checked + label + .egor_history, #case2:checked + label + .danya_history{
+#case1:checked + label + .egor_history, #case2:checked + label + .danya_history, #case3:checked + label + .richard_history, #case4:checked + label + .marsik_history, #case5:checked + label + .ariya_history, #case6:checked + label + .dusya_history {
 	display: block;
 	animation: show 1s ease;
+	text-align: start;
 }
-[for=case1], [for=case2] {
+[for=case1], [for=case2],[for=case3], [for=case4], [for=case5], [for=case6] {
 	color: #FFF;
 }
-[for=case1]:hover, [for=case2]:hover {
+[for=case1]:hover, [for=case2]:hover, [for=case3]:hover, [for=case4]:hover, [for=case5]:hover, [for=case6]:hover {
 	cursor: pointer;
 	color: #f10808;
 }
+.textmain {
+	box-sizing: border-box;
+	width: auto;
+	margin: 0 200px;
+	box-shadow:  0 0 10px rgba(255,255,255,0.5);
+	padding: 20px;
+    background: #000;
+	color: #fff;
+	text-align: start;
+}
+.textmain > h3 {
+	
+}
+main > h1 {
+	color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
 /* FOOTER */
 .contacts {
 	background: #000;
@@ -238,7 +258,9 @@ h1::selection, h3::selection, a::selection, p::selection, li::selection, nav::se
 		content: '✗';
 		color: #f10808;
 	}
-	.masterclass {
+}
+@media (max-width: 1200px) {
+		.masterclass {
 	display: table;
 	margin: 0 50px;
 	}
@@ -246,7 +268,6 @@ h1::selection, h3::selection, a::selection, p::selection, li::selection, nav::se
 		width: 100%;
 	}
 }
-
 @keyframes show {
 	0% {
 		opacity: 0;
